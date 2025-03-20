@@ -17,9 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Scripts -->
-    <link rel="stylesheet" href="/build/assets/app-DqME6eCz.css">
-    <script src="/build/assets/app-DqME6eCz.js"></script>
-    {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
     <div id="app">
@@ -81,7 +79,7 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key === 'Enter') this.click()">
                                     {{ Auth::user()->name }}
                                 </a>
 
